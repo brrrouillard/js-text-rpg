@@ -5,7 +5,7 @@
 Any web browser.
 
 ### Installing and Running
-Launch index.html files considering the exercice you want to observe.
+Launch [index.html](https://brrrouillard.github.io/js-text-rpg/).
 
 ## Purpose
 I built this simple mini-game during my internship at BeCode. The goal was to learn and practice JavaScript functions and Object-Oriented Programming.
