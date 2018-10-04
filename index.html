@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM RPG</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="player-panel">
+            <h1 id="player-name">Hero</h1>
+            <h2>Level : </h2>
+            <p id="player-level"></p><br>
+            <h2>Life : </h2>
+            <p id="player-life"></p><br>
+            <h2>Experience : </h2>
+            <p id="player-experience"></p><br>
+        </div>
+        <div class="ennemy-panel">
+            <h1 id="player-name">Ennemy</h1>
+            <h2>Level : </h2>
+            <p id="ennemy-level"></p><br>
+            <h2>Life : </h2>
+            <p id="ennemy-life"></p><br>
+            <h2>Experience : </h2>
+            <p id="ennemy-experience"></p><br>
+        </div>
+        <div class="player-panel">
+            <button id="player-attack-button" onclick="Commands.newTurn(player, ennemy);">Attack !</button>
+        </div>
+        <div class="ennemy-panel">
+            <button id="ennemy-attack-button" onclick="Commands.newTurn(ennemy, player);">Attack !</button>
+        </div>
+
+        <div class="logs-area">
+            <textarea id="logs" rows="10" cols="100"></textarea>
+        </div>
+        <script src="js/Character.class.js"></script>
+        <script src="js/Item.class.js"></script>
+        <script src="js/Commands.class.js"></script>
+        <script>
+            // INITIALIZE OBJECTS
+            let logs = document.querySelector("#logs");
+            let playerWeapon = new Item("Deuillegivre", 10, 1, 100);
+            let ennemyWeapon = new Item("Hache", 5, 5, 100);
+            let player = new Character("Matthieu", 1, 100, playerWeapon, "#player-life", "#player-experience", "#player-level");
+            let ennemy = new Character("Zombie", 1, 50, ennemyWeapon, "#ennemy-life", "#ennemy-experience", "#ennemy-level");
+            let characters = [player, ennemy]; // Array containing both characters
+            Commands.refresh(); // Show base values
+
+
+
+
+        </script>
+
+
+    </div>
+
+</body>
+
+</html>

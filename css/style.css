@@ -1,0 +1,41 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100vw;
+    height: 100vh;
+}
+
+.player-panel {
+    grid-column: 1 / span 2;
+    padding: 2%;
+}
+
+.ennemy-panel {
+    grid-column: 4 / span 2;
+    padding: 2%;
+}
+
+.logs-area {
+    grid-column: 2 / span 2;
+}
+
+h2, p {
+    display: inline;
+}
+h1 {
+    font-size: 300%;
+}
+
+button {
+    font-size: 150%;
+}
