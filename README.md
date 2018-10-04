@@ -1,4 +1,4 @@
-# Javascript Part 2
+# Javascript Text RPG
 ## Getting Started
 
 ### Prerequisites
